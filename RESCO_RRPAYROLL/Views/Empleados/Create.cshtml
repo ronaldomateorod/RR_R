@@ -1,0 +1,120 @@
+﻿@model RESCO_RRPAYROLL.Models.Empleado
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Registrar Empleado</h2>
+
+@* <h4>Empleado</h4> *@
+<hr />
+<div class="row">
+    <div class="">
+        <form asp-action="Create" style="font-size:20px;">
+            <div class="row justify-content-center align-items-center">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Documento" class="control-label"></label>
+                        <input asp-for="Documento" class="form-control" />
+                        <span asp-validation-for="Documento" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Nombres" class="control-label"></label>
+                        <input asp-for="Nombres" class="form-control" />
+                        <span asp-validation-for="Nombres" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Apellidos" class="control-label"></label>
+                        <input asp-for="Apellidos" class="form-control" />
+                        <span asp-validation-for="Apellidos" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FechaNacimiento" class="control-label"></label>
+                        <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                        <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Sexo" class="control-label"></label>
+                        <select asp-for="Sexo" class="form-control">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                        <span asp-validation-for="Sexo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Direccion" class="control-label"></label>
+                        <input asp-for="Direccion" class="form-control" />
+                        <span asp-validation-for="Direccion" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Telefono" class="control-label"></label>
+                        <input asp-for="Telefono" id="telefonoInput" class="form-control" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="IdNacionalidad" class="control-label"></label>
+                        <select asp-for="IdNacionalidad" class="form-control" asp-items="ViewBag.IdNacionalidad"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdProvincia" class="control-label"></label>
+                        <select asp-for="IdProvincia" class="form-control" asp-items="ViewBag.IdProvincia"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CuentaBancaria" class="control-label"></label>
+                        <input asp-for="CuentaBancaria" class="form-control" />
+                        <span asp-validation-for="CuentaBancaria" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdTipoCuenta" class="control-label"></label>
+                        <select asp-for="IdTipoCuenta" class="form-control" asp-items="ViewBag.IdTipoCuenta"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdBanco" class="control-label"></label>
+                        <select asp-for="IdBanco" class="form-control" asp-items="ViewBag.IdBanco"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdEstado" class="control-label"></label>
+                        <select asp-for="IdEstado" class="form-control" asp-items="ViewBag.IdEstado"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Contratado" class="control-label"></label>
+                        <select asp-for="Contratado" class="form-control">
+                            <option value="true">Sí</option>
+                            <option value="false">No</option>
+                        </select>
+                        <span asp-validation-for="Contratado" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group text-center mt-3">
+                    <input type="submit" value="Registrar" class="btn btn-primary" />
+                </div>
+            </div>
+            
+
+        </form>
+    </div>
+</div>
+
+@* <div>
+    <a asp-action="Index">Back to List</a>
+</div> *@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        document.getElementById('telefonoInput').addEventListener('input', function (e) {
+            var input = e.target.value.replace(/\D/g, '').substring(0, 10); // Elimina caracteres no numéricos y limita a 10 dígitos
+            var formatted = input.replace(/^(\d{3})(\d{3})(\d{4})$/, '$1-$2-$3'); // Formato XXX-XXX-XXXX
+            e.target.value = formatted;
+        });
+    </script>
+}
