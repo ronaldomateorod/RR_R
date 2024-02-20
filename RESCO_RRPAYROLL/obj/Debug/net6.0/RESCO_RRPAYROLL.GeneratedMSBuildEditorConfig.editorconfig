@@ -9,157 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RESCO_RRPAYROLL
 build_property.RootNamespace = RESCO_RRPAYROLL
-build_property.ProjectDir = C:\Users\18097\OneDrive\Documents\RESCO_RRPAYROLL\RESCO_RRPAYROLL\
+build_property.ProjectDir = C:\Users\franc\Source\Repos\RR\RESCO_RRPAYROLL\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\18097\OneDrive\Documents\RESCO_RRPAYROLL\RESCO_RRPAYROLL
+build_property.MSBuildProjectDirectory = C:\Users\franc\Source\Repos\RR\RESCO_RRPAYROLL
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Bancos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuY29zXENyZWF0ZS5jc2h0bWw=
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Access/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Bancos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuY29zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Bancos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuY29zXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Bancos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuY29zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Bancos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuY29zXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Clientes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Clientes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Clientes/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Clientes/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Clientes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Empleados/Create.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Empleados/Delete.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Empleados/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Empleados/Details.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Empleados/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Empleados/Edit.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Empleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Empleados/Index.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Empleados/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Estados/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Estados/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Estados/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Estados/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Estados/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Home/Index.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Home/Privacy.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Puestos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Puestos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Puestos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Puestos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Puestos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Shared/Error.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/TipoCuentas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0N1ZW50YXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/TipoCuentas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0N1ZW50YXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/TipoCuentas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0N1ZW50YXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/TipoCuentas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0N1ZW50YXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/TipoCuentas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0N1ZW50YXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/_ViewImports.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/_ViewStart.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/18097/OneDrive/Documents/RESCO_RRPAYROLL/RESCO_RRPAYROLL/Views/Shared/_Layout.cshtml]
+[C:/Users/franc/Source/Repos/RR/RESCO_RRPAYROLL/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rmp2obr383

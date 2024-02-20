@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using RESCO_RRPAYROLL.Data;
 using RESCO_RRPAYROLL.Models;
+using RESCO_RRPAYROLL.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,13 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<RrpayrollDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/Access/Login";
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+                });
 
 var app = builder.Build();
 
@@ -25,10 +33,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Access}/{action=Login}/{id?}");
 
 app.Run();

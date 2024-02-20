@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RESCO_RRPAYROLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b23598dc95cad7748a1a71261208a2f1c50a3370")]
 [assembly: System.Reflection.AssemblyProductAttribute("RESCO_RRPAYROLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RESCO_RRPAYROLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

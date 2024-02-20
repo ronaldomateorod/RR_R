@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RESCO_RRPAYROLL.props" />
+</Project>

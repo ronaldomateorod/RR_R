@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\18097\\OneDrive\\Documents\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj": {}
+    "C:\\Users\\franc\\Source\\Repos\\RR\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\18097\\OneDrive\\Documents\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj": {
+    "C:\\Users\\franc\\Source\\Repos\\RR\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\18097\\OneDrive\\Documents\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\Source\\Repos\\RR\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj",
         "projectName": "RESCO_RRPAYROLL",
-        "projectPath": "C:\\Users\\18097\\OneDrive\\Documents\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj",
-        "packagesPath": "C:\\Users\\18097\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\18097\\OneDrive\\Documents\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL\\obj\\",
+        "projectPath": "C:\\Users\\franc\\Source\\Repos\\RR\\RESCO_RRPAYROLL\\RESCO_RRPAYROLL.csproj",
+        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\franc\\Source\\Repos\\RR\\RESCO_RRPAYROLL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\18097\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,7 +61,7 @@
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.26, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -92,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
