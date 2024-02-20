@@ -1,0 +1,2 @@
+insert into Usuarios(nombre, Contrasena, ContrasenaAnterior,IdEmpleado,IdEstado,FechaCreacion,CreadoPor,
+				FechaModificacion,ModificadoPor) values('admin001','321321',null,null,1,GETDATE(),null,null,null)
