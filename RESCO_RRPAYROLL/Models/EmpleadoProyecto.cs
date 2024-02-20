@@ -15,7 +15,7 @@ public partial class EmpleadoProyecto
 
     public DateTime FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 

@@ -19,11 +19,11 @@ public partial class Proyecto
 
     public DateTime FechaFinal { get; set; }
 
-    public int IdEstado { get; set; }
+    public int? IdEstado { get; set; }
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 
@@ -33,7 +33,7 @@ public partial class Proyecto
 
     public virtual ICollection<EmpleadoProyecto> EmpleadoProyectos { get; set; } = new List<EmpleadoProyecto>();
 
-    public virtual Estado IdEstadoNavigation { get; set; } = null!;
+    public virtual Estado? IdEstadoNavigation { get; set; } = null!;
 
     public virtual ICollection<Nomina> Nominas { get; set; } = new List<Nomina>();
 }

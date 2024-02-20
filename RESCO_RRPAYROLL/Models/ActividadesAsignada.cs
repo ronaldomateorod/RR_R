@@ -17,9 +17,9 @@ public partial class ActividadesAsignada
 
     public int IdEstado { get; set; }
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 

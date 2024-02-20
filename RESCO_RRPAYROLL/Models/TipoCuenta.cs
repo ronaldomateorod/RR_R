@@ -9,9 +9,9 @@ public partial class TipoCuenta
 
     public string Nombre { get; set; } = null!;
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 

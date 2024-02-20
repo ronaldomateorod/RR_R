@@ -11,9 +11,9 @@ public partial class NominaDeduccione
 
     public int IdDeducciones { get; set; }
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 

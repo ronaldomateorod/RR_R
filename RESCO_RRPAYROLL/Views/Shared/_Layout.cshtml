@@ -1,11 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RESCO_RRPAYROLL</title>
-    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RESCO_RRPAYROLL.styles.css" asp-append-version="true" />
 </head>
@@ -26,9 +25,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,12 +34,12 @@
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <a href="" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline">Menu</span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link align-middle px-0">
                                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                             </a>
                         </li>
@@ -54,11 +50,30 @@
                             <ul class="collapse nav flex-column ms-4" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
                                     <a class="nav-link px-0" asp-area="" asp-controller="Empleados" asp-action="Create">
-                                        <span class="d-none d-sm-inline">Registrar Empleado</span></a>
+                                        <span class="d-none d-sm-inline">Registrar Empleado</span>
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="nav-link px-0" asp-area="" asp-controller="Empleados" asp-action="Index">
-                                        <span class="d-none d-sm-inline">Listado de Empleados</span></a>
+                                        <span class="d-none d-sm-inline">Listado de Empleados</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Gestionar Bancos</span>
+                            </a>
+                            <ul class="collapse nav flex-column ms-4" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a class="nav-link px-0" asp-area="" asp-controller="Bancoes" asp-action="Create">
+                                        <span class="d-none d-sm-inline">Registrar Banco</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link px-0" asp-area="" asp-controller="Bancoes" asp-action="Index">
+                                        <span class="d-none d-sm-inline">Listado de Bancos</span>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -68,10 +83,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
                                 <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span>
                             </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                            <ul class="collapse nav flex-column ms-4" id="submenu3" data-bs-parent="#menu">
                                 <li class="w-100">
                                     <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
                                 </li>
@@ -81,21 +96,34 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
+                            <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">ExtraAdmin</span>
                             </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                            <ul class="collapse nav flex-column ms-4" id="submenu4" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                    <a class="nav-link px-0" asp-area="" asp-controller="Actividades" asp-action="Create">
+                                        <span class="d-none d-sm-inline">Actvidades</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                    <a class="nav-link px-0" asp-area="" asp-controller="Bancos" asp-action="Create">
+                                        <span class="d-none d-sm-inline">Bancos</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                    <a class="nav-link px-0" asp-area="" asp-controller="Estados" asp-action="Create">
+                                        <span class="d-none d-sm-inline">Estados</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                    <a class="nav-link px-0" asp-area="" asp-controller="Puestos" asp-action="Create">
+                                        <span class="d-none d-sm-inline">Puestos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link px-0" asp-area="" asp-controller="TipoCuentas" asp-action="Create">
+                                        <span class="d-none d-sm-inline">Tipo de cuentas bancarias</span>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -132,11 +160,11 @@
         </div>
     </div>
 
-    <div class="container">
+@*     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </div> *@
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -144,7 +172,7 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

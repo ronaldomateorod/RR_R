@@ -17,9 +17,9 @@ public partial class Permiso
 
     public int IdAsistencia { get; set; }
 
-    public DateTime FechaMcreacion { get; set; }
+    public DateTime? FechaMcreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 

@@ -19,11 +19,18 @@ namespace RESCO_RRPAYROLL.Controllers
             _context = context;
         }
 
+        [AcceptVerbs("Get", "Post")]
+        public async Task<IActionResult> VerifyDocumento(string documento)
+        {
+            var empleado = await _context.Empleados.FirstOrDefaultAsync(e => e.Documento == documento);
+            return Json(empleado == null);
+        }
+
         // GET: Empleados
         public async Task<IActionResult> Index()
         {
-            var rRPAYROLL_DBContext = _context.Empleados.Include(e => e.IdBancoNavigation).Include(e => e.IdEstadoNavigation).Include(e => e.IdNacionalidadNavigation).Include(e => e.IdProvinciaNavigation).Include(e => e.IdTipoCuentaNavigation);
-            return View(await rRPAYROLL_DBContext.ToListAsync());
+            var rrpayrollDbContext = _context.Empleados.Include(e => e.IdBancoNavigation).Include(e => e.IdEstadoNavigation).Include(e => e.IdNacionalidadNavigation).Include(e => e.IdProvinciaNavigation).Include(e => e.IdTipoCuentaNavigation);
+            return View(await rrpayrollDbContext.ToListAsync());
         }
 
         // GET: Empleados/Details/5
@@ -41,7 +48,25 @@ namespace RESCO_RRPAYROLL.Controllers
                 .Include(e => e.IdProvinciaNavigation)
                 .Include(e => e.IdTipoCuentaNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (empleado == null)
+            if (empleado != null)
+            {
+
+                string nSexo = empleado.Sexo.ToString();
+                string mSexo;
+
+                if (nSexo == "M")
+                {
+                    mSexo = "Masculino";
+                    ViewBag.Sexo = mSexo;
+                }
+                else
+                {
+                    mSexo = "Femenino";
+                    ViewBag.Sexo = mSexo;
+                }
+            }
+
+            else
             {
                 return NotFound();
             }
@@ -52,11 +77,11 @@ namespace RESCO_RRPAYROLL.Controllers
         // GET: Empleados/Create
         public IActionResult Create()
         {
-            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Id");
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Id");
-            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Id");
-            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Id");
-            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Id");
+            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Nombre");
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Nombre");
+            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Nombre");
+            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Nombre");
+            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Nombre");
             return View();
         }
 
@@ -67,17 +92,49 @@ namespace RESCO_RRPAYROLL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Documento,Nombres,Apellidos,FechaNacimiento,Sexo,Direccion,Telefono,Email,IdNacionalidad,IdProvincia,CuentaBancaria,IdTipoCuenta,IdBanco,IdEstado,Contratado,FechaContratacion,FechaLiquidacion,FechaCreacion,CreadoPor,FechaModificacion,ModificadoPor")] Empleado empleado)
         {
+
+            var fechaNacimientoDate = empleado.FechaNacimiento.Date;
+
+            // Asignar fecha convertida
+            empleado.FechaNacimiento = fechaNacimientoDate;
+
+            if (empleado.Sexo == "Masculino")
+            {
+                empleado.Sexo = "M";
+            }
+            else if (empleado.Sexo == "Femenino")
+            {
+                empleado.Sexo = "F";
+            }
+
+
             if (ModelState.IsValid)
             {
+
+                empleado.FechaCreacion = DateTime.Now;
+                empleado.FechaContratacion = DateTime.Now;
+
                 _context.Add(empleado);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Id", empleado.IdBanco);
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Id", empleado.IdEstado);
-            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Id", empleado.IdNacionalidad);
-            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Id", empleado.IdProvincia);
-            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Id", empleado.IdTipoCuenta);
+            else
+            {
+                // Imprimir o revisar errores
+                var errores = ModelState.Values.SelectMany(x => x.Errors);
+
+                // Opcional:
+                foreach (var error in errores)
+                {
+                    Console.WriteLine(error.ErrorMessage);
+                }
+            }
+
+            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Nombre", empleado.IdBanco);
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Nombre", empleado.IdEstado);
+            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Nombre", empleado.IdNacionalidad);
+            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Nombre", empleado.IdProvincia);
+            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Nombre", empleado.IdTipoCuenta);
             return View(empleado);
         }
 
@@ -94,11 +151,11 @@ namespace RESCO_RRPAYROLL.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Id", empleado.IdBanco);
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Id", empleado.IdEstado);
-            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Id", empleado.IdNacionalidad);
-            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Id", empleado.IdProvincia);
-            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Id", empleado.IdTipoCuenta);
+            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Nombre", empleado.IdBanco);
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Nombre", empleado.IdEstado);
+            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Nombre", empleado.IdNacionalidad);
+            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Nombre", empleado.IdProvincia);
+            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Nombre", empleado.IdTipoCuenta);
             return View(empleado);
         }
 
@@ -118,6 +175,7 @@ namespace RESCO_RRPAYROLL.Controllers
             {
                 try
                 {
+                    empleado.FechaModificacion = DateTime.Now;
                     _context.Update(empleado);
                     await _context.SaveChangesAsync();
                 }
@@ -134,11 +192,11 @@ namespace RESCO_RRPAYROLL.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Id", empleado.IdBanco);
-            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Id", empleado.IdEstado);
-            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Id", empleado.IdNacionalidad);
-            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Id", empleado.IdProvincia);
-            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Id", empleado.IdTipoCuenta);
+            ViewData["IdBanco"] = new SelectList(_context.Bancos, "Id", "Nombre", empleado.IdBanco);
+            ViewData["IdEstado"] = new SelectList(_context.Estados, "Id", "Nombre", empleado.IdEstado);
+            ViewData["IdNacionalidad"] = new SelectList(_context.Nacionalidades, "Id", "Nombre", empleado.IdNacionalidad);
+            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "Id", "Nombre", empleado.IdProvincia);
+            ViewData["IdTipoCuenta"] = new SelectList(_context.TipoCuentas, "Id", "Nombre", empleado.IdTipoCuenta);
             return View(empleado);
         }
 
@@ -172,7 +230,7 @@ namespace RESCO_RRPAYROLL.Controllers
         {
             if (_context.Empleados == null)
             {
-                return Problem("Entity set 'RRPAYROLL_DBContext.Empleados'  is null.");
+                return Problem("Entity set 'RrpayrollDbContext.Empleados'  is null.");
             }
             var empleado = await _context.Empleados.FindAsync(id);
             if (empleado != null)

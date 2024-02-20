@@ -17,15 +17,15 @@ public partial class Cliente
 
     public string Email { get; set; } = null!;
 
-    public int IdEstado { get; set; }
+    public int? IdEstado { get; set; }
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 
     public string? ModificadoPor { get; set; }
 
-    public virtual Estado IdEstadoNavigation { get; set; } = null!;
+    public virtual Estado? IdEstadoNavigation { get; set; } = null!;
 }

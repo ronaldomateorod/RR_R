@@ -38,7 +38,8 @@
             @Html.DisplayNameFor(model => model.Sexo)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Sexo)
+            @* @Html.DisplayFor(model => model.Sexo) *@
+            @ViewBag.Sexo
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Direccion)
@@ -110,31 +111,31 @@
             @Html.DisplayNameFor(model => model.IdBancoNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdBancoNavigation.Id)
+            @Html.DisplayFor(model => model.IdBancoNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdEstadoNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdEstadoNavigation.Id)
+            @Html.DisplayFor(model => model.IdEstadoNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdNacionalidadNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdNacionalidadNavigation.Id)
+            @Html.DisplayFor(model => model.IdNacionalidadNavigation.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdProvinciaNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdProvinciaNavigation.Id)
+            @Html.DisplayFor(model => model.IdProvinciaNavigation.Nombre) 
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdTipoCuentaNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdTipoCuentaNavigation.Id)
+            @Html.DisplayFor(model => model.IdTipoCuentaNavigation.Nombre)
         </dd>
     </dl>
 </div>

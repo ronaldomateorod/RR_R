@@ -17,7 +17,7 @@ public partial class Usuario
 
     public int IdEstado { get; set; }
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
     public string? CreadoPor { get; set; }
 

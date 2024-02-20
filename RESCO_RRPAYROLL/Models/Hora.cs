@@ -13,9 +13,9 @@ public partial class Hora
 
     public int? IdAsistencia { get; set; }
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; } 
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 

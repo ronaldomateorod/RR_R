@@ -11,9 +11,9 @@ public partial class TipoNomina
 
     public string Descripcion { get; set; } = null!;
 
-    public DateTime FechaCreacion { get; set; }
+    public DateTime? FechaCreacion { get; set; }
 
-    public string CreadoPor { get; set; }
+    public string? CreadoPor { get; set; }
 
     public DateTime? FechaModificacion { get; set; }
 
